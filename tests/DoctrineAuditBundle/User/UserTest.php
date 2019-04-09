@@ -15,6 +15,10 @@ class UserTest extends TestCase
         $user = new User(1, 'john.doe');
 
         $this->assertSame(1, $user->getId());
+
+        $user = new User('2343e48e-8dff-443a-87c2-99b738a4c24c', 'john.doe');
+
+        $this->assertSame('2343e48e-8dff-443a-87c2-99b738a4c24c', $user->getId());
     }
 
     public function testGetUsername(): void
